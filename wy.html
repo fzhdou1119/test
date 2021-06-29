@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="referrer" content="no-referrer"/>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="minimum-scale=0.5,maximum-scale=1.0,user-scalable=no, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="keywords" content="百丽宫">
+<meta name="description" content="百丽宫">
+<meta name="robots" content="index, follow"/>
+<meta name="revisit-after" content="1 days"/>
+<link href="/assets/mui/css/mui.css?v=1.002" rel="stylesheet">
+<link href="/assets/mui/css/mui.extra.css?v=1.001" rel="stylesheet">
+<link href="/assets/css/wap/user.css?v=1.003" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link href="/assets/css/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/wap/style.css?v=1.034" rel="stylesheet">
+<link href="/assets/css/wap/bootstrap-theme-flat-light-orange.css" rel="stylesheet">
+<link href="/assets/css/wap/responsivepx.css?v=1.022" rel="stylesheet">
+<link href="/assets/css/wap/skin-default.css?v=1.001" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/wap/jquery.lazyload.js"></script>
+<script src="/assets/js/wap/jquery.autocomplete.js"></script>
+<script src="/assets/js/wap/jquery-1.7.2.js"></script>
+<script src="/assets/layui/layui.all.js"></script>
+<script src="/assets/mui/js/mui.min.js"></script>
+<script src="/assets/js/download.js"></script>
+<script src="/assets/js/wap/new_base.js?v=1.11"></script>
+<script src="/assets/js/wap/common.js?v=1.034"></script>
+
+<style>
+    body {
+        font-size: 14px;
+    }
+
+    header .nav-top ul li a {
+        float: inherit;
+        background: none;
+        font-size: 16px;
+    }
+
+    header .nav-top ul li a:hover {
+        background-color: black;
+    }
+
+    #content {
+        padding-bottom: 80px;
+    }
+
+    .mui-input-group::before {
+        background: none;
+    }
+
+    .mui-input-group::after {
+        background: none;
+    }
+
+    .user-div-link a {
+        padding: 0 1%;
+        font-size: 12px;
+        color: #7c3d20;
+        line-height: 22px;
+    }
+
+    .login—div-message {
+        padding: 2.4%;
+        float: left;
+        text-align: left;
+        font-size: 12px;
+        border: 1px solid #959595;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .logo_message_top{
+        width: 100%;
+    }
+    .login—div-message div{
+        padding: 0 2%;
+    }
+</style>
+    <title>视频详情</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/wap/video.css?v=1.0.2">
+    <style>
+        .mui-table-view-img1 {
+            height: 4rem;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .mui-video-title p {
+            display: inline-block;
+            width: 6rem;
+        }
+
+        .czbnt {
+
+            margin-top: 9rem;
+        }
+
+        .czbnt {
+            display: block; 
+            text-align: center;
+            width: 96%;
+            background-color: indianred;
+            color: #fff;
+            border-radius: 15px;
+            padding: 7px;
+            margin: 1.5% auto;
+        }
+
+        .czbnt:hover, czbnt:focus {
+            color: chartreuse;
+        }
+
+        .mui-video-title p {
+            cursor: pointer;
+        }
+        .content-container{
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        input[name="line"]{
+            margin: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.8/skins/default/aliplayer-min.css"/>
+    <script type="text/javascript" charset="utf-8"
+            src="https://g.alicdn.com/de/prismplayer/2.8.8/aliplayer-min.js"></script>
+</head>
+<body>
+<div id="login-container"></div>
+
+<style>
+    .ul_nav {
+        background-color: white;
+    }
+
+    .ul_nav li {
+        width:33%;
+        float: left;
+        line-height: 29px;
+        text-align: center;
+        position:unset;
+    }
+
+    .ul_nav li img{
+        width: 12px;
+        font-size: 10px;
+    }
+
+    .ul_nav #cate_video_count{
+        width: 100%;
+    }
+
+
+    .navbar-collapse {
+        border: none;
+    }
+
+    .ul_nav li a {
+        padding: unset;
+    }
+
+    .left_ul li img {
+        width: 30px;
+        margin:0 4px;
+    }
+</style>
+<script language="javascript">
+     window.onload = function(){
+         var image=new Array();
+    	 image[0] = "/assets/img/1111xxx.gif";
+    	 image[1] = "/assets/img/3333xxx.gif";
+    	 image[2] = "/assets/img/5555xxx.gif";
+     	 image[3] = "/assets/img/0000xxx.gif";
+    	 image[4] = "/assets/img/1234xxx.gif";
+    	 image[5] = "/assets/img/6789xxx.gif";
+    
+    	 var ints=parseInt(Math.random()*(image.length));
+    	 
+    	 window.document.getElementById("logoimg").src = image[ints];
+	     
+	 };
+</script>
+
+<header>
+    <div class="header-top">
+        <div style="margin-right: 10%;text-align: right;">
+            <span id="top-message-span" style="display: none">
+                <a id="user_private_unread" href="/wap/user/message/index"><img src="/assets/img/wap/top-privete.png" border="0">(0)</a> |
+                <a id="user_unread" href="/wap/user/msg/index"><img src="/assets/img/wap/tpl_icon_new_message.gif" border="0">(0)</a> |
+            </span>
+            <a href="javascript:void(0);" onclick="AddFavorite('百丽宫成人视频','http://qqqq.sb')">收藏</a> | <a href="javascript:void(0);" onclick="toDesktop('http://blg.sb','百丽宫成人视频')">下载到桌面</a>
+        </div>
+    </div>
+    <div class="nav-content">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img id="logoimg" src="/assets/img/1111xxx.gif" style="width: 100%;height: 100%;" alt="百丽宫"/></a>
+            </div>
+            <div class="search">
+                <input type="search" class="mui-input-clear" placeholder="搜索关键词" data-input-clear="1"
+                       data-input-search="1" style="font-size: 16px;color: #2a2424db;">
+                <span style="padding: 8px;background-color: #f2990d;border-radius: 5px;margin-left: 3%;">
+                    <a class="" href="javascript:void(0);" onclick="search_submit()" style="color: white;">搜索</a>
+                </span>
+            </div>
+            <div class="login">
+                <form id="user_login" method="post" role="form" class="pull-left logincss" style="width: 100%">
+                    <div class="row" style="margin-left: 0;float: none;">
+                        <div class="col-xs-5">
+                            <input tabindex="1" id="phone" name="phone" autocomplete="off" maxlength="15"
+                                   placeholder="账号或手机号" type="text" class="form-control u-input">
+                        </div>
+                        <div class="col-xs-6" style="padding: 4px;float: right;">
+                            <input type="button" tabindex="4" class="loginbtn" id="loginBtn" value="">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-left: 0;float: none;">
+                        <div class="col-xs-5">
+                            <input tabindex="2" id="password" name="password" autocomplete="off" placeholder="密码"
+                                   type="password" class="form-control p-input">
+                        </div>
+                        <div class="col-xs-6" style="padding: 4px;float: right;">
+                            <!--                            <input type="submit" tabindex="4" class="regbtn" value="" onclick="window.location.href=/wap/account/login/register.html">-->
+                            <a href="/wap/account/login/register.html" class="regbtn"></a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="clearfix">
+            </div>
+            <div class="categroy_all_div">
+                <a class="type_all" href="javascript:void(0);">分类</a>
+            </div>
+            <nav class="navbar navbar-inverse" role="navigation" id="menu-main">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header" id="menu-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                style="border:none;" data-target="#menu-main-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="">导航</span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu-main-collapse">
+                        <ul id="menu-main-content" class="nav navbar-nav">
+                            <li class="active"><a href="/wap" title="首页">首页</a></li>
+                            <li class="bet-nav-link"><a href="javascript:void(0);" onclick="blg_link()"  rel="nofollow">投注</a></li>
+                            <li><a target="_blank" rel="nofollow" title="" href="/wap/account/login/index?type=agency" >网赚推广</a></li>
+                            <li><a rel="nofollow" title="" href="/wap/novel/index/novelCategory" >小说</a></li>
+                            <li><a href="/wap/account/login/h5_register" rel="nofollow">APP下载</a></li>
+                            <li><a href="/wap/index/kf" target="_blank" rel="nofollow">在线客服</a></li>
+                            <li class="activity-nav-link"><a href="/wap/activity/index/index" rel="nofollow">优惠活动</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <nav class="navbar-inverse" role="navigation" id="phone-menu-main">
+                <div class="container-fluid phone-container-fluid">
+                    <div class="collapse phone-navbar-collapse">
+                        <ul class="nav phone-navbar-nav">
+                            <li class="active"><a href="/" title="首页">首页</a></li>
+                            <li><a target="_blank" rel="nofollow" title="" href="/wap/account/login/index?type=agency" >网赚</a></li>
+                            <li><a href="/wap/account/login/h5_register" rel="nofollow">APP下载</a></li>
+                            <li><a href="/wap/account/login/agreement/key/userAgreement.html" rel="nofollow">充值VIP说明</a></li>
+                            <li><a href="/wap/novel/index/novelCategory" rel="nofollow">小说</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <div class="type_div_all">
+                    <ul class="nav nav-stacked navigation ul_nav">
+                        <li>
+                            <a href="/wap/video/index/HotVideo">最新视频
+                                <span class="badge category-count pull-right"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    <div class="container">
+        <div class="flexBox warn-block">
+            <div class="flex-item vCenter">
+                 <img src="/assets/img/wap/newtl.png" width="50" height="30" style="line-height: 35px;">
+    <!--            <span class="icon-horn">-->
+    
+    <!--            </span>-->
+            </div>
+            <marquee class="flex-item subFlexBox marquee" behavior="scroll" direction="left" style="position: initial;"></marquee>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="content-container container-item" style="padding-bottom: 80px;">
+    <div class="ads">
+        <div id="video">
+            <h1 class="video_title_h1" style="height: 30px;line-height: 30px;margin-left: -50px;">
+                <span style="padding: 8px;background-color: #f2990d;border-radius: 5px;/*! margin-left: 3%; */float: left;font-size: 14px;line-height: 14px;margin-left: 50px;">
+                    <a class="" href="javascript:history.go(-1);" style="color: white;">&lt;返回</a>
+                </span>
+                <span id="title">
+
+                </span>
+            </h1>
+            <div class="left content content-video">
+                <div id="player-container">
+                    <div id="bofang_box" class="video-js vjs-default-skin" style="height:550px;">
+                        <div id="over2" style="display:none;height: 100%;width: 100%;">
+                            <div  style="background-color: #0d1318;z-index: 100;height: 100%;width: 100%;text-align: center;padding-top: 15%;">
+                                <p style="color: #B0B0B0;padding: 5px;font-size: 16px;">由于您VIP已到期或免费看片剩余0</p>
+                                <p style="margin: 0 auto;overflow: hidden;width: 30%;">
+                                    <a href="/wap/agency/index/index.html" target="_blank" style="float: left;">
+                                        <img style="width: 150px;" src="/assets/img/mobile/video/tgzq.png" />
+                                    </a>
+
+                                    <a href="/wap/account/login/agreement/key/userAgreement.html" target="_blank" style="float: right;">
+                                        <img style="width: 150px;" src="/assets/img/mobile/video/cksm.png" />
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <a id="over3" href="/wap/account/login/index.html" style="display:none">
+                            <div  style="background-color: #0d1318;z-index: 100;height: 100%;width: 100%;text-align: center;padding-top: 15%;">
+                                <p style="color: #B0B0B0;padding: 5px;font-size: 16px;">注册会员即可免费获得看片次数</p>
+                                <p style="color: #fff;display: inline-block;padding: 6px;border-radius:11px;width: 200px;">
+                                    <img style="width: 200px;" src="/assets/img/mobile/video/dlkthy.png" />
+                                </p>
+                            </div>
+                        </a>
+
+                        <a id="over4" href="/wap/account/login/agreement/key/userAgreement.html" style="display:none">
+                            <div  style="background-color: #0d1318;z-index: 100;height: 100%;width: 100%;text-align: center;padding-top: 15%;">
+                                <p style="color: #B0B0B0;padding: 5px;font-size: 16px;">继续观看请开通VIP会员</p>
+                                <p style="color: #fff;display: inline-block;padding: 6px;border-radius:11px;width: 150px;">
+                                    <img style="width: 150px;" src="/assets/img/mobile/video/kthy.png" />
+                                </p>
+                            </div>
+                        </a>
+                        <div style="width:100%;" id="player-con"></div>
+                    </div>
+                </div>
+                <div class="ads-player">
+                </div>
+
+            </div>
+            <div id="advertisement_word" style="font-size: 20px;"></div>
+            <!--<div class="mui-content" style="width: inherit;background-color: #fbfbfb;">-->
+            <!--    <a href='/wap/index/kf' class="czbnt" target="_blank">联系在线客服开通月VIP</a>-->
+            <!--</div>-->
+
+            <div class="mui-video-title">
+                <div class="mui-title-logo"
+                     style="display: none; height: 100px;width: 100%; margin-bottom: 20px; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;top: 0;text-align: left;">
+                    <div class="video_details_user">
+                        <p class="mui-title-name" style="font-size: 13px;width:240px;" id="muiname">视频由会员： 百丽宫2005018711
+                            提供
+                        </p>
+                        <br>
+                        <p style="font-size: 12px;width: 240px;"><a id="to_user_href">查看：百丽宫2005018711 所有作品</a></p>
+                        <p id="attention" class="div-attention">
+                            <img src="/assets/img/wap/attention.png">
+                        </p>
+                        &nbsp; &nbsp;
+                        <p id="letter" class="div-attention" style="margin-left: 10px;">
+                            <img src="/assets/img/wap/letter.png">
+                        </p>
+                    </div>
+                </div>
+                <div class="mui-video-title-text" id="videotitle"></div>
+
+                <p id="getit" style="margin-right: 5%;width: 10%;max-width: 50px;">
+                    <a style="color: inherit; text-decoration: none;">
+                        <img src="/assets/img/wap/collect_1.png" height="16" id="collect_img">
+                        <span>收藏</span>
+                    </a>
+                </p>
+                <p id="clickgood" style="width: 10%;max-width: 50px;margin-right: 5%;">
+                    <a style="color: inherit; text-decoration: none;">
+                        <img src="/assets/img/wap/like_1.png" height="16" id="like_img">
+                        <span id="videoheard">喜欢</span>
+                    </a>
+                </p>
+                <p id="download_video"
+                   style="border: 0;padding: 0;background: none;margin-right: 5%;width: 10%;max-width: 70px; width: 70px;">
+                    <a style="color: inherit; text-decoration: none;">
+                        <img src="/assets/img/wap/download_1.png" height="16" id="down_img">
+                        <span style="font-size: 14px;width: 70px;display: block;">下载本视频</span>
+                    </a>
+                </p>
+                <p style="border: 0;padding: 0;background: none;margin-right: 5%;width: 10%;max-width: 70px; width: 70px;">
+                    <a href="/wap/account/login/agreement/key/downloadAgreement.html" style="color: inherit; text-decoration: none;">
+                        <img id="download_instructions_img" src="/assets/img/wap/download_instructions_1.png" height="16">
+                        <span style="font-size: 14px;width: 70px;display: block;">下载说明</span>
+                    </a>
+                </p>
+            </div>
+            <div class="brand-img-top" >
+            </div>
+            <div class="clearfix">
+            </div>
+            <!--<div role="tabpanel" class="thumbnail">-->
+                <!--<ul class="nav nav-tabs" role="tablist">-->
+                <!--    <li role="presentation" class="active">-->
+                <!--        <a href="#related" aria-controls="related" role="tab" data-toggle="tab">-->
+                <!--            <strong>相关视频</strong>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--</ul>-->
+                <!--<div class="tab-content">-->
+                <!--    <div role="tabpanel" class="tab-pane active" id="related" style="padding-top: 10px;">-->
+                <!--        <input name="related-page" type="hidden" value="2">-->
+                <!--        <ul class="videos related">-->
+                <!--            <ul class="videos" id="video_ul">-->
+                <!--            </ul>-->
+                <!--        </ul>-->
+                <!--        <div class="clearfix">-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="brand-img-end" >
+            </div>
+            <div class="ads-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gotop" style="display: block;"><i class="fa fa-arrow-up"></i> </div>
+<div id="pc_footer" class="hidden-xs hidden-sm">
+    <div class="ads-footer">
+    </div>
+    <center>
+        <p>友情链接</p>
+        <!--<a href="javascript:void(0);" onclick="blg_link()" class="btn btn-default btn-xs margin-bottom-5">百丽宫平台</a>-->
+        <a href="javascript:void(0);" onclick="blg_link(4)" class="btn btn-default btn-xs margin-bottom-5">百丽宫联盟</a>
+        <a href="javascript:void(0);" onclick="blg_link(5)" class="btn btn-default btn-xs margin-bottom-5">百丽宫视频</a>
+    </center>
+    <div id="my_ads" style="display: none;">
+        <div class="mui-card" >
+            <div class="mui-card-content">
+                <a href="{{ad_href}}" title="{{ad_title}}">
+                    <img src="#{{ad_url}}" alt="{{ad_title}}"  width="100%" style="max-height: 20rem;" >
+                </a>
+            </div>
+            <div class="mui-card-footer">
+                <p style="color: #333; padding: 7px;"></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container" style="text-align: center;padding-bottom: 20px;">
+            <ul class="list-inline text-center">
+            </ul>
+            <span>百丽宫视频：网上最好的资源站baiLigong.xxx或baiLigong.com.cn</span>
+        </div>
+    </div>
+</div>
+
+<div id="h5_footer" class="h5_footer">
+    <section class="tabContainer">
+        <a class="nav-item" href='/wap/index/index.html'>
+            <span class="index-icon"></span>
+            <div>首页</div>
+        </a>
+        <a class="nav-item" href='javascript:void(0)' onclick="blg_link()">
+            <span class="bet-icon"></span>
+            <div>投注</div>
+        </a>
+        <a class="nav-item " href='/wap/video/index/videoCategory.html'>
+            <span class="video-icon"></span>
+            <div>视频</div>
+        </a>
+        <!-- <a class="nav-item " href='/wap/video/index/exclusivevideo.html'>-->
+        <a class="nav-item " href='/wap/index/kf' target="_blank">
+            <span class="kf-icon"></span>
+            <div>客服</div>
+        </a>
+        <a class="nav-item " href='/wap/user/profile/index.html'>
+            <span class="profile-icon"></span>
+            <div>会员</div>
+        </a>
+    </section>
+</div>
+<script src="/assets/js/wap/aes.js"></script>
+<script src="/assets/js/wap/PreviewVodComponent/aliplayercomponents-1.0.0.min.js"></script>
+<script src="/assets/js/wap/clipboard.min.js"></script>
+<script type="text/javascript">
+
+    var sts = {whats: false,page:1, id: 121886, put:'' , player: null, time: 0, token: null, playurl:null, is_like: 0,autoplay: 1,line: 'null'};
+
+    mui.ready(function () {
+        init_config();
+        //加载视频
+        loadVidew();
+        $('#getit').on('click', function () {
+
+            if (!sts.login) {
+                layer.msg("请先登陆");
+            } else {
+                mui.getJSON('/api/video/index/collect.html', {
+                    video_id: sts.id,
+                    access_token: sts.token
+                }, function (data) {
+                    if (data.c == 0) {
+                        layer.msg("收藏成功");
+                        $('#collect_img').attr('src', '/assets/img/wap/collect.png')
+                    } else {
+                        layer.msg(data.m);
+                    }
+                });
+            }
+        });
+
+    });
+
+    function loadVidew() {
+        var table = $('#video_ul');
+        jQuery.post('/api/video/index/details.html', {video_id: sts.id, access_token: sts.token}, function (data) {
+            var data = JSON.stringify(data);
+            data = eval('(' + data + ')');
+            if (data.c == 0) {
+                if (data.d.video) {
+                    var video = data.d.video;
+                    var key = 'QE75dBbLvwaylwTe';
+                    var iv = 'AES_Pwd__AES_Pwd';
+                    var ikey = CryptoJS.enc.Utf8.parse(key);
+                    var iiv = CryptoJS.enc.Utf8.parse(iv);
+                    var playurl = video.default_url;
+                    
+                    playurl = video.play_url;
+                    
+
+
+                    var line_name_arr = '';
+                    if(data.d.category.is_display == 'Y'){
+                        if(is_vip()){
+                            if(sts.line!='null'){
+                                line_name_arr = sts.line.split('_');
+                            }else{
+                                line_name_arr = get_user_line().split('_');
+                            }
+                            switch (line_name_arr[0]) {
+                                case '0':
+                                    playurl = data.d.video.video_url_arr[1][line_name_arr[1]][line_name_arr[2]];
+                                    break;
+                                case '1':
+                                    playurl = data.d.video.video_url_arr[2][line_name_arr[1]][line_name_arr[2]];
+                                    break;
+                                default :
+                                    break;
+                            }
+                        }else{
+                            if(is_login()){
+                                if(sts.line!='null'){
+                                    line_name_arr = sts.line.split('_');
+                                }else{
+                                    line_name_arr = get_user_line().split('_');
+                                }
+
+                                switch (line_name_arr[0]) {
+                                    case '0':
+                                        playurl = data.d.video.video_url_arr[1][line_name_arr[1]][line_name_arr[2]];
+                                        break;
+                                    default :
+                                        break;
+                                }
+                            }else{
+                                var free = getRandom(2)-1;
+                                var hbo = getRandom(4)-1;
+                                playurl = data.d.video.video_url_arr[1][free][hbo];
+                                sts.line = 0+'_'+free +'_'+ hbo;
+                            }
+                        }
+                    }
+
+                    var decrypted = CryptoJS.AES.decrypt(playurl, ikey, {
+                        iv: iiv,
+                        mode: CryptoJS.mode.CBC,
+                        padding: CryptoJS.pad.Pkcs7
+                    });
+
+                    playurl = decrypted.toString(CryptoJS.enc.Utf8);
+
+                    $('title').html(video.video_title);
+                    $('#title').html(str_substring(video.video_title,18,50));
+
+
+                    sts.time = data.d.watch_data.remaining_watch_time;
+
+                    //if(!sts.login || (sts.time <= 0 && !is_vip() && data.d.category.view_type == 2) || (!is_vip() && data.d.category.view_type == 2 && (data.d.category.access == 'vip' || data.d.category.is_display == 'N') )){
+                        //playurl = video.default_url;;
+                    //}
+
+                    sts.player = new Aliplayer({
+                        id: "player-con",
+                        width: "100%",
+                        height: "100%",
+                        source: playurl,
+                        cover: video.cover,
+                        autoplay: true,
+                        isLive: false,
+                        playsinline: false,
+                        x5_type: 'h5',
+                        encryptType:1,
+                    }, function (player) {
+                        playVid(player);
+                    });
+
+                    tuozhuai(sts.player);
+
+                    sts.player.on('play',function () {
+                        playVideo();
+                    });
+
+                    sts.player.on('ended',function () {
+                        endVideo();
+                    });
+
+                    //if (!sts.login) {
+                    //    sts.player.on('timeupdate', function () {
+                    //        var ztime = sts.player.getDuration();
+                    //        if(ztime <= sts.free){
+                    //            sts.free = sts.free - (sts.free - ztime - 0.5);
+                    //        }
+                    //        if (sts.player.getCurrentTime() > sts.free) {
+                    //            document.getElementById('over3').style.display = '';
+                    //            $('.prism-player').css('background','none');
+                    //            $('body,html').animate({ scrollTop: 0 }, 300);
+                    //            sts.player.dispose();
+                    //        }
+                    //    });
+                    //} else {
+                    //    if (sts.time <= 0) {
+                    //        sts.player.on('timeupdate', function () {
+                    //            var ztime = sts.player.getDuration();
+                    //            if(ztime <= sts.free){
+                    //                sts.free = sts.free - (sts.free - ztime - 0.5);
+                    //            }
+                    //            if (sts.player.getCurrentTime() > sts.free && sts.time <= 0) {//
+                    //                document.getElementById('over2').style.display = '';//
+                    //                $('.prism-player').css('background', 'none');
+   //                                 $('body,html').animate({ scrollTop: 0 }, 300);
+   //                                 sts.player.dispose();
+   //                             }
+   //                         });
+   //                     }else if((data.d.category.access == 'vip' || dat//a.d.category.is_display == 'N') && !is_vip() && data.d.category.view_type == 2){
+   //                         sts.player.on('timeupdate', function () {
+   //                             var ztime = sts.player.getDuration();
+   //                             if(ztime <= sts.free){
+   //                                 sts.free = sts.free - (sts.free - ztime - 0.5);
+   //                             }
+   //                             if (sts.player.getCurrentTime() > sts.free) {
+   //                                 document.getElementById('over4').style.display = '';//
+   //                                 $('.prism-player').css('background', 'none');
+   //                                 $('body,html').animate({scrollTop: 0}, 300);
+   //                                 sts.player.dispose();
+   //                             }
+   //                         })
+   //                     }
+   //                 }
+   //                 sts.is_like = video.is_like;
+   //                 if (video.is_like == 1) {
+   //                     document.getElementById("like_img").src = '/assets/img/wap/lik//e.png';
+   //                 }
+
+                    //if (data.d.is_collect != 0) {
+                    //    document.getElementById("collect_img").src = '/assets/img/wap/collect.png';//
+                    //}
+                //}//
+                var link_word = '';
+                var advertisement = data.d.advertisement;
+
+                if(data.d.advertisement_word){
+                    link_word += '<div style="width: 100%;"><a href="javascript:void(0);" onclick="blg_link()">'+ data.d.advertisement_word.title +'</a></div>';
+                }
+
+
+
+                link_word += '<div class="video_user_select_div">';
+
+                if(data.d.after){
+                    link_word += '<div class="video_href_link"><a id="video_right_next" data-id="'+ data.d.after.video_id +'"  href="javascript:void(0);" onclick="skip_video(1)">下一片视频</a></div>';
+                }else{
+                    link_word += '<div class="video_href_link"><a href="javascript:void(0);">下一片没有了</a></div>';
+                }
+
+                if(data.d.front){
+                    link_word += '<div class="video_href_link" style="margin-left: 10px;"><a id="video_right_top" data-id="'+ data.d.front.video_id +'" onclick="skip_video(0)" >上一片视频</a></div>';
+                }else{
+                    link_word += '<div class="video_href_link" style="margin-left: 10px;"><a href="javascript:void(0);">上一片没有了</a></div>';
+                }
+
+                link_word += '<div style="float: left;line-height: 40px;margin-left: 20px;">如视频卡或无法播放请切换线路</div>';
+
+                link_word += '</div>';
+                
+                var video_line = '';
+                var line_name = ['公共通道 一 ','公共通道二 ','VIP通道一','VIP通道二','VIP通道三','VIP通道四'];
+                var line_val = 0;
+                if(data.d.video.video_url_arr.length > 0){
+                    link_word += '<div class="video-line">';
+                    
+                    var li_class_name = 'video-line-common';
+                    
+                    for(var j = 0;j<data.d.video.video_url_arr[1].length;j++){
+                        link_word += '<div>' +
+                                '<div style="line-height: 40px;float: left;width: 10%;">'+ line_name[line_val] +'</div>' +
+                                '<ul class="video-line-active" style="width: 90%;float: left;">';
+                                
+                        for(var k = 0;k<data.d.video.video_url_arr[1][j].length;k++){
+                            var line_tag = 0 + '_' + j + '_' + k;
+                            link_word +=  '<li>\n' +
+                                    '                    <div class="' + li_class_name +'" >\n' +
+                                    '   <a  href="/wap/video/index/details1/video_id/' + sts.id + '/line/'+ line_tag +'.html"> 线路'+ (k+1) +'\n' + '</a>\n' +
+                                    '                    <input type="radio" id="'+ line_tag +'" name="line" value="'+ line_tag +'"/>\n' +
+                                    '                    </div>\n' +
+                                    '                </li>\n';
+                        }
+                        link_word += '</ul></div>';
+                        line_val++;
+                    }
+                    
+                    var li_class_name = 'video-line-vip';
+                    
+                    for(var j = 0;j<data.d.video.video_url_arr[2].length;j++){
+                        
+                        link_word += '<div>' +
+                                '<div style="line-height: 40px;float: left;width: 10%;">'+ line_name[line_val] +'</div>' +
+                                '<ul class="video-line-active" style="width: 90%;float: left;">';
+    
+                        for(var k = 0;k<data.d.video.video_url_arr[2][j].length;k++){
+                            var line_tag = 1 + '_' + j + '_' + k;
+                            link_word +=  '<li>\n' +
+                                    '                    <div class="' + li_class_name +'" >\n' +
+                                    '   <a  href="/wap/video/index/details1/video_id/' + sts.id + '/line/'+ line_tag +'.html"> 线路'+ (k+1) +'\n' + '</a>\n' +
+                                    '                    <input type="radio" id="'+ line_tag +'" name="line" value="'+ line_tag +'"/>\n' +
+                                    '                    </div>\n' +
+                                    '                </li>\n';
+                        }
+                        link_word += '</ul></div>';
+                        line_val++;
+                    }
+                }
+
+
+                if(advertisement.top){
+                    $.each(advertisement.top,function (i,val) {
+                        var target = '';
+                        if(val.target){
+                            target = ' target="_blank" '
+                        }
+                        var adstop = '<a href="' + val.ad_href + '" '+ target +'>\n' +
+                            '                    <img src="'+ val.ad_url +'" class="brand-a-img">\n' +
+                            '                </a>';
+                        $('.brand-img-top').append(adstop);
+                    })
+                }
+
+                if(advertisement.end){
+                    $.each(advertisement.end,function (i,val) {
+                        var target = '';
+                        if(val.target){
+                            target = ' target="_blank" '
+                        }
+                        var adstop = '<a href="' + val.ad_href + '" '+ target +'>\n' +
+                            '                    <img src="'+ val.ad_url +'" class="brand-a-img">\n' +
+                            '                </a>';
+                        $('.brand-img-end').append(adstop);
+                    })
+                }
+
+
+                $('#advertisement_word').html(link_word);
+                
+                if(sts.line != 'null' && !is_login()){
+                    $('#'+sts.line).attr("checked","checked");
+                }else{
+                    $('#'+get_user_line()).attr("checked","checked");
+                }
+
+                $(":radio").click(function () {
+                    line_name_arr = $(this).val().split('_');
+                    if(line_name_arr.length == 3){
+                        if(is_vip() && line_name_arr[0] == 1){
+                            return set_user_line($(this).val());
+                        }else{
+                            if(!sts.login){
+                                layer.msg('温馨提示：请注册登入后才能更改通道');
+                                return false
+                            }else if(line_name_arr[0] == 0){
+                                return set_user_line($(this).val());
+                            }else{
+                                layer.msg('高速通道vip专用，请您充值vip。');
+                            }
+                        }
+                    }
+                    return false
+                });
+
+                if (data.d.user) {
+                    $('.mui-title-logo').show();
+                    $('#to_user_href').attr('href', '/wap/video/index/to_user_upload_video?to_user=' + data.d.user.user_id);
+                    $('#to_user_href').html('查看：' + data.d.user.user_nickname + ' 所有作品  ' + data.d.user_video_count);
+                    $('#muiname').html('视频由会员： ' + data.d.user.user_nickname + ' 提供');
+
+                    sts.put = data.d.user;
+                }
+                if (data.d.guess_like) {
+                    data = data.d.guess_like;
+
+                    for (var i = 0, len = data.length; i < len; i++) {
+                        var li = document.createElement('li');
+                        var toUrl1 = "/wap/video/index/details/video_id/NMID.html";
+                        toUrl1 = toUrl1.replace('NMID', data[i].video_id);
+
+                        li.innerHTML = ''
+                            + '<div class="video">'
+                            + '<a href="' + toUrl1 + '" title="' + data[i].video_title + '" class="thumbnail" target="_blank">'
+                            + '<div class="video-thumb">'
+                            + ' <img src="' + data[i].cover + '" alt="' + data[i].video_title + '"/>'
+                            + '</div>'
+                            + '<span class="video-title">' + data[i].video_title + '</span>'
+                            + '<span class="video-overlay badge transparent"></span>'
+                            + '<div class="video-details hidden-xs hidden-sm">'
+                            + '<span class="pull-left">' + datestying(data[i].create_time, 'Y-M-D') + '</span>'
+                            + '<span class="pull-right text-right">时长：' + data[i].duration + '</span>'
+                            + '</div></a></div>';
+                        table.append(li);
+
+                        if (data[i].carousel) {
+                            var li = document.createElement('li');
+                            var toUrl1 = data[i].carousel.href;
+
+                            li.className = 'mui-table-view-li';
+                            li.innerHTML = ''
+                                + '<div class="mui-table-view-img1">'
+                                + '<a href="' + toUrl1 + '"><img class="mui-table-view-img" src="' + data[i].carousel.url + '" style="height:100%" /></a>'
+                                + '</div>'
+                                + '<div class="mui-table-view-div">  &nbsp;&nbsp;</div>';
+                            table.appendChild(li);
+                        }
+                    }
+                } else {
+                    var li = document.createElement('div');
+                    li.innerHTML = '暂无数据';
+                }
+            } else if (data.c == 10042 || data.c == 10015) {
+                mui.toast(data.m);
+                localStorage.clear();
+                mui.openWindow({
+                    url: "/wap/account/login/index.html",
+                    id: "/wap/account/login/index.html"
+                });
+            } else {
+                mui.toast(data.m);
+            }
+        }).error(function () {
+            mui.toast('网络错误');
+        });
+    }
+
+
+    function lineSelect(line) {
+        line_name_arr = line.split('_');
+        if(line_name_arr.length == 3){
+            if(is_vip() && line_name_arr[0] == 1){
+                set_user_line(line);
+            }else{
+                if(!sts.login){
+                    layer.msg('温馨提示：请注册登入后才能更改通道');
+                }else if(line_name_arr[0] == 0){
+                    set_user_line(line);
+                }else{
+                    layer.msg('高速通道vip专用，请您充值vip。');
+                }
+            }
+        }
+    }
+
+
+    function skip_video(num){
+        var video_id = '';
+        if(num == 0){
+            if($('#video_right_top').length > 0){
+                video_id = $('#video_right_top').data('id');
+            }
+        }else if(num == 1){
+            if($('#video_right_next').length > 0){
+                video_id = $('#video_right_next').data('id');
+            }
+        }
+
+        if(video_id != ''){
+            window.location.href = "/wap/video/index/details?video_id=" + video_id;
+        }
+    }
+
+    function is_vip() {
+        var user_data = JSON.parse(localStorage.getItem("user_data"));
+        if(user_data){
+            if (user_data.user_is_member == 'Y' && user_data.user_member_expire_time != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function get_user_line() {
+        var user_data = JSON.parse(localStorage.getItem("user_data"));
+        if(user_data){
+            return user_data.user_line;
+        }
+        return false;
+    }
+
+    function set_user_line(line) {
+        if(get_user_line() != line){
+            var num = getRandom(10000);
+            mui.getJSON('/api/user/profile/updateUserLine.html',{access_token: sts.token,line:line,num:num}, function (data) {
+                if (data.c == 0) {
+                    layer.msg('默认线路已更改，播放下一片切换线路！');
+                    update_user(0);
+                    return true;
+                } else {
+                    layer.msg(data.m);
+                    return false;
+                }
+            });
+        }
+    }
+
+    function playVid(player) {
+        if (typeof (sts.player) !== "undefined") {
+            sts.player.play();
+            playVideo();
+        } else {
+            setTimeout(function () {
+                playVid(player);
+            }, 1000);
+        }
+    }
+
+    function endVideo() {
+        if($('#autoplay').is(':checked')){
+            if($("#video_right_next").length>0){
+                var next_id = $('#video_right_next').data('id');
+                window.location.href = '/wap/video/index/details?video_id='+ next_id +'&autoplay=1';
+            }else {
+                layer.msg('已经是最后一个视频啦！');
+            }
+        }
+    }
+
+
+    function init_config() {
+        var token = localStorage.getItem("token");
+        if (!token) {
+            sts.login = false;
+
+        } else {
+            sts.login = true;
+            sts.token = token;
+        }
+        if (sessionStorage.getItem('config') == null) {
+            mui.getJSON('/api/user/app/config.html', function (data) {
+                if (data.c == 0) {
+                    sts.free = data.d.free_watch_times;
+                    sessionStorage.setItem('free_watch_times', sts.free);
+                    sessionStorage.setItem('config', 1);
+                } else {
+                    sessionStorage.setItem('free_watch_times', 0);
+                }
+            });
+        } else {
+            sts.free = sessionStorage.getItem('free_watch_times');
+        }
+    }
+
+
+    function playVideo() {
+        //播放视频，记录观看历史
+        mui.getJSON('/api/video/index/watch.html', {video_id: sts.id, access_token: sts.token}, function (data) {
+            if (data.c == 0) {
+                sts.time = data.d.remaining_watch_time;
+                update_user();
+            } else if(data.c == 10042 || data.c == 10015) {
+                layer.alert(data.m, {closeBtn: 0},function(index){
+                    localStorage.clear();
+                    layer.close(index);
+                    mui.openWindow({
+                        url: "/wap/account/login/index.html",
+                        id: "/wap/account/login/index.html"
+                    });
+                });
+            }else {
+                sts.time = 0;
+            }
+        });
+    }
+
+
+    //下载
+    document.getElementById('download_video').addEventListener('click', function () {
+        jQuery.post('/api/video/index/userDownloadVideo.html', {
+            video_id: sts.id,
+            access_token: sts.token
+        }, function (data) {
+            var data = JSON.stringify(data);
+            data = eval('(' + data + ')');
+            if (data.c == 0) {
+                if (data.d.download_url != "") {
+                    update_user();
+                    window.location.href = data.d.download_url;
+                } else {
+                    layer.msg('当前视频无法下载！');
+                }
+            } else if(data.c == 12003) {
+                layer.msg('当前视频无法下载！');
+            } else if(data.c == 10042 || data.c == 10015) {
+                layer.alert(data.m, {closeBtn: 0},function(index){
+                    localStorage.clear();
+                    layer.close(index);
+                    mui.openWindow({
+                        url: "/wap/account/login/index.html",
+                        id: "/wap/account/login/index.html"
+                    });
+                });
+            }else{
+                layer.msg(data.m);
+            }
+        })
+    });
+
+    $('#letter').click(function () {
+        if(sts.login && sts.put != ''){
+            window.location.href = '/wap/user/attention/chat?uid='+ sts.put.user_id;
+        }else{
+            layer.msg('请先登录账号！');
+        }
+    })
+
+    //关注
+    document.getElementById('attention').addEventListener('click', function () {
+        jQuery.post('/api/video/index/userAttentionAdd.html', {
+            video_id: sts.id,
+            access_token: sts.token
+        }, function (data) {
+            var data = JSON.stringify(data);
+            data = eval('(' + data + ')');
+            if (data.c == 0) {
+                layer.msg('关注成功！');
+            }  else if(data.c == 10042 || data.c == 10015) {
+                layer.msg(data.m);
+                localStorage.clear();
+                mui.openWindow({
+                    url: "/wap/account/login/index.html",
+                    id: "/wap/account/login/index.html"
+                });
+            }else {
+                layer.msg(data.m);
+            }
+        })
+    });
+
+    document.getElementById('clickgood').addEventListener('click', function () {
+
+        if (sts.is_like == 1) {
+            layer.msg('您已经点赞过啦~');
+            return false;
+        }
+        jQuery.post('/api/video/index/like.html', {video_id: sts.id, access_token: sts.token}, function (data) {
+            var data = JSON.stringify(data);
+            data = eval('(' + data + ')');
+            if (data.c == 0) {
+                layer.msg('点赞成功！');
+                sts.is_like = 1;
+                $('#like_img').attr('src', '/assets/img/wap/like.png');
+            } else if (data.c == 10042 || data.c == 10015) {
+                localStorage.clear();
+                layer.msg(data.m);
+                mui.openWindow({
+                    url: "/wap/account/login/index.html",
+                    id: "/wap/account/login/index.html"
+                });
+            } else {
+                layer.msg(data.m);
+            }
+        }).error(function () {
+            layer.msg('网络错误');
+        });
+    });
+</script>
+<script src="/assets/js/wap/tuozhuai.js?v=1.0.11"></script>
+</body>
+</html>
